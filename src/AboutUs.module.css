@@ -1,0 +1,58 @@
+.imgaboutus{
+    width: 200px;
+    height:90px;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin-left: 39%;
+    background-color: rgb(178, 238, 238);
+    border-radius: 100%;
+    /* border: 1px solid; */
+    padding: 10px;
+    /* box-shadow: 5px 10px #888888; */
+    margin-top: 154px;
+}
+.main{
+    border:10px solid white;
+    background-image: url("https://tourismandtechnologysummit.com/wp-content/uploads/2019/04/avid-technology-computer-design-1080P-wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-attachment: fixed;
+}
+.text{
+   margin-left: 2%;
+}
+
+
+@media only screen and (max-width: 1024px){
+
+    .imgaboutus{
+        width: 200px;
+        height:90px;
+        justify-content: center;
+        align-items: center;
+        display: block;
+        margin-left: 39%;
+        background-color: rgb(178, 238, 238);
+        border-radius: 100%;
+        /* border: 1px solid; */
+        padding: 10px;
+        /* box-shadow: 5px 10px #888888; */
+        margin-top: 154px;
+    }
+    .main{
+        border:10px solid white;
+        background-image: url("https://tourismandtechnologysummit.com/wp-content/uploads/2019/04/avid-technology-computer-design-1080P-wallpaper.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .text{
+       margin-left: 2%;
+    }
+    
+}
+   
+
