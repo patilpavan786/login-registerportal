@@ -16,14 +16,19 @@ function Register() {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
   const [userData, setUserData] = useState(initialValues);
-
+  let getNewData
   const handleSubmit = (e) => {
     e.preventDefault();
-    addingUser(email, username, password);
+    if (email && username && password === ""){
+    }else if( getNewData=userData.filter(e=>e.username.includes(username) && e.email.includes(email))){
+     
+    addingUser(email, username, password)}
+    alert("Sucessfully Registered")
   };
-
+  // let getNewData=news.filter(e=>e.username.includes(username) && e.password.includes(password))
+  // console.log(getNewData)
+  // alert(`You Are LoggedIn ${getNewData[0].email}`)
   const addingUser = (email, username, password) => {
     const newUser = {
       email: email,
@@ -32,25 +37,26 @@ function Register() {
     };
     setUserData([...userData, newUser]);
     localStorage.setItem("user", JSON.stringify(userData));
-    console.log(userData);
+    //console.log(userData);
   };
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(userData));
-    // eslint-disable-next-line
+    
   }, [userData]);
-
+//console.log(userData)
 
   return (
     <div className={reg.main} >
     <Header />
     <div className={reg.container}>
-      {/* {Object.keys(formErrors).length === 0 && isSubmit ? (
-      <div className={reg.sucess}>Signed in successfully</div>
-      ) : (
-        null
-      )} */}
+     
 
-      <form className={reg.form} onSubmit={handleSubmit}>
+      <form className={reg.form}  onSubmit={
+     
+      handleSubmit
+      }
+      >
+     
       <img className={reg.img} src="https://image.shutterstock.com/image-vector/user-icon-260nw-523867123.jpg" />
         <div className="ui divider"></div>
         <div className="ui form">
@@ -60,7 +66,7 @@ function Register() {
        <div className={reg.input1}></div> 
        <i class="fa fa-solid fa-user"></i>
        <input
-      //  required
+       required
       //  pattern="/\s/g"
               type="text"
               className={reg.input}
@@ -104,12 +110,12 @@ function Register() {
             />
           </div>
           
-          <button className="fluid ui button blue">Register</button>
+          <button className="fluid ui button blue" >Register</button>
         </div>
       
       </form>
       <br/>
-      <h5 style={{color:"black"}}>Already have an account    <NavLink style={{color:"blue"}}to="/Login">Log In</NavLink></h5>
+      <h5 style={{color:"black"}}>Already have an account<NavLink style={{color:"blue"}}to="/Login">Log In</NavLink></h5>
     </div>
     
     </div>

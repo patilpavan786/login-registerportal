@@ -21,8 +21,11 @@ useEffect(()=>{
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
+
     e.preventDefault();
+    let getNewData=news.filter(e=>e.username===(username) && e.password===(password))
     addingUser( username, password);
+    console.log(getNewData)
   };
 
   const addingUser = ( username, password) => {
@@ -32,19 +35,20 @@ useEffect(()=>{
     };
    
   };
+  
 
-  function LogIn(){
-      console.log(news)
-      let getNewData=news.filter(e=>e.username.includes(username) && e.password.includes(password))
-      console.log(getNewData)
-      setAlert(getNewData[0].email)
+  // function LogIn(){
+  //     console.log(news)
+  //     let getNewData=news.filter(e=>e.username.includes(username) && e.password.includes(password))
+  //     console.log(getNewData)
+  //    // alert(`You Are LoggedIn ${getNewData[0].email}`)
       
-  }
+  // }
    
   return (
     <div className={log.main} >
     <Header />
-    <h3 style={{fontFamily:"sans-serif", color:"white", marginTop:"10px",marginLeft:"10%"}}>{`Welcome ${alert}`}</h3>
+    {/* <h3 style={{fontFamily:"sans-serif", color:"white", marginTop:"10px",marginLeft:"10%"}}>{`Welcome ${alert}`}</h3> */}
     <div className={log.container}>
       
       <form className={log.form} onSubmit={handleSubmit}>
@@ -84,8 +88,8 @@ useEffect(()=>{
               onChange={(e)=> setPassword(e.target.value)}
             />
           </div>
-          
-          <button onClick={LogIn}className="fluid ui button blue">LogIn</button>
+          {/* onClick={LogIn} */}
+          <button className="fluid ui button blue">LogIn</button>
         </div>
       
       </form><br/>

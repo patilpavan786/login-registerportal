@@ -14,7 +14,7 @@
     justify-content: space-between;
     margin-right: 100px;
     border: 1px solid gray;
-    width: 95%;
+    width: 96.8%;
     background-color: rgba(92, 176, 197, 0.753);
 
 }
@@ -23,6 +23,11 @@
   font-style: bold;
   color: white;
   font-family: Gotham;
+}
+.img{
+  
+  border-radius: 50%;
+ 
 }
 .log{
   font-size: 40px;
