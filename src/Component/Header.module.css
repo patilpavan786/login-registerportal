@@ -1,0 +1,119 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+  }
+.navbar{
+    padding: 0 2rem;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 100px;
+    border: 1px solid gray;
+    width: 96.8%;
+    background-color: rgba(92, 176, 197, 0.753);
+
+}
+.link{
+  font-size: 20px;
+  font-style: bold;
+  color: white;
+  font-family: Gotham;
+}
+.img{
+  
+  border-radius: 50%;
+ 
+}
+.log{
+  font-size: 40px;
+  font-family: Franklin Gothic;
+  color: rgb(255, 255, 255);
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+    
+    
+}
+nav li a{
+    color: #000;
+} 
+.btn {
+    border: none;
+    outline: none;
+    color: black;
+    background-color: transparent;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+  
+  }
+  
+.btn i {
+    font-size: 2rem;
+  }
+ .logo{
+    font-size: 100px;
+  }
+
+@media only screen and (max-width: 1024px) {
+    .btn {
+      visibility: visible;
+      opacity: 1;
+      display: block;
+    }
+  
+    .navbar nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      transform: translateY(-100vh);
+      
+     
+    }
+   
+  
+    .navbar .toggleNavbar {
+      background-color: #1b263b;
+      transform: none;
+    }
+    nav li a{
+        color: #fff;
+    } 
+    .btnClose {
+      position: absolute;
+      top: 2rem;  
+      right: 2rem;
+      width: 50px;
+      font: normal;
+      padding: 5px;
+      background-color: rgb(224, 37, 37);
+    }
+    .btnMenu{
+      font-size: 30px;
+      background-color: transparent;
+      border: none;
+    }
+    .close{
+      font: 30px ;
+      font-weight: bolder;
+      width: 50px;
+    }
+  }
+
+
+
